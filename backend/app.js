@@ -1,11 +1,21 @@
 require('express-async-errors')
+const mongoose = require('mongoose')
 const express = require('express')
-const { default: ofertasRouter } = require('./controllers/ofertas')
+const ofertasRouter = require('./controllers/ofertas')
+const gruposRouter = require('./controllers/grupos')
 const app = express()
+const cors = require('cors')
+require('dotenv').config()
+
+
+app.use(cors())
+
+
+app.use(express.json())
+app.use("/api/ofertas", ofertasRouter)
+app.use("/api/grupos", gruposRouter)
+
 
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log("Connected to MONGODB"))
-app.listen(process.env.PORT, () => {
-    console.log(`URL Backend: http://localhost:${process.env.PORT}`)
-})
 
-app.use('/api/ofertas', ofertasRouter)
+module.exports = app

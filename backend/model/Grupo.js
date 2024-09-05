@@ -10,6 +10,12 @@ const grupoSchema = new mongoose.Schema({
     }
 })
 
+grupoSchema.set('toJSON', {
+    transform: (_, reqObj) => {
+        delete reqObj._id
+        delete reqObj.__v
+    }
+})
 grupoSchema.plugin(uniqueValidator)
 
 module.exports = mongoose.model('Grupo', grupoSchema)

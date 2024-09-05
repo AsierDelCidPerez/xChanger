@@ -1,9 +1,6 @@
 const app = require('./app')
-const { encryptData, decrypt } = require('./utils/encryptionCenter')
 require('dotenv').config()
 
-const valor = "DvNc#KJZJ47ty%!94Ev@"
-const valorEnc = encryptData(valor)
 
 /*
 console.log(valorEnc)

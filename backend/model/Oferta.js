@@ -1,6 +1,5 @@
 
 const mongoose = require('mongoose')
-const uniqueValidator = require('mongoose-unique-validator')
 
 const ofertaSchema = new mongoose.Schema({
     origen: {

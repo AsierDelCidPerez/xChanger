@@ -56,7 +56,10 @@ function App() {
         <Typography variant="h6" sx={{textAlign: 'center'}}>Creado por Asier Del Cid Pérez</Typography><hr/>
         <footer style={{textAlign: 'center'}}>Atención: esta web carece de validez a nivel institucional (es decir, de la Universidad de Cantabria). Esta web simplemente ha sido creada como medio de comunicación entre los alumnos para que puedan coordinar cambios en los grupos. Se ruega que se use un correo al menos accesible ya que nos pondremos en contacto con usted <a href="mailto:cambio.grupos.informatica@gmail.com">cambio.grupos.informatica@gmail.com</a> cuando haya algún interesado en la oferta.</footer>
         <div style={{textAlign: 'center'}}>
-        <a href=""><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-512.png" width="5%"/></a>
+        <div style={{display: 'flex', justifyContent: 'space-around'}}>
+        <a href="https://github.com/AsierDelCidPerez/xChanger" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-512.png" width="50"/></a>
+        <a href="https://opensource.org/" target="_blank"><img width="50" src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/240_Opensource_Open_Source-256.png"/></a>
+        </div>
         </div>
       </Container>
     </div>

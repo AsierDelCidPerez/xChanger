@@ -8,9 +8,8 @@ const enviarMensaje = async (correoInteresado, correoCreador, origen, destino)  
         port: 465,
         secure: true,
         auth: {
-          // TODO: replace `user` and `pass` values from <https://forwardemail.net>
           user: 'cambio.grupos.informatica@gmail.com',
-          pass: 'wirn sdkl mgjo fblc'
+          pass: process.env.GMAIL
         }
       })
 

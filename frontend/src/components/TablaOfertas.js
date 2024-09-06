@@ -32,7 +32,7 @@ const TablaOfertas = ({setNotification, groups, setGroups, ofertas, setOfertas})
     const inscripcionBody = () => (
         <Box component="form" onSubmit={inscribirse}>
             <Typography sx={{textAlign: 'center'}} variant="h5">Inscribirse a oferta</Typography><hr/><br/>
-            <TextField fullWidth variant="outlined" name="email" label="Email de contacto"/><br/><br/>
+            <TextField required type="email" fullWidth variant="outlined" name="email" label="Email de contacto"/><br/><br/>
             <Button type="submit" fullWidth variant="contained">Inscribirme a la oferta</Button>
         </Box>
     )

@@ -6,6 +6,11 @@ const { enviarMensaje } = require('./email')
 
 
 const inscribirmeEnOferta = async (id, email, req, res) => { // El origen y destino son de interés
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+    if(!regex.test(email)) {
+        res.status(400).send({msg: "El email no es válido"})
+        return
+    }
     try{
         console.log(id)
         const ofert = await Oferta.findById(id)

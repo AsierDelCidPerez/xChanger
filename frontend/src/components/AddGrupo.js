@@ -26,10 +26,10 @@ const AddGrupo = ({setNotification, groups, setGroups, ofertas, setOfertas}) => 
 
     const crearOfertaBody = () => (
         <Box component="form" onSubmit={crearGrupo}>
-            <Typography sx={{textAlign: 'center'}} variant="h5">Crear oferta</Typography><hr/><br/>
+            <Typography sx={{textAlign: 'center'}} variant="h5">Añadir grupo</Typography><hr/><br/>
             <TextField fullWidth type="text" variant="outlined" name="grupo" required label="Nombre del grupo"/>
             <br/><br/>
-            <Button fullWidth variant="contained" type="submit">Inscribirme a la oferta</Button>
+            <Button fullWidth variant="contained" type="submit">Añadir grupo</Button>
         </Box>
     )
 
